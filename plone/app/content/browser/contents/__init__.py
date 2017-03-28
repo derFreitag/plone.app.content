@@ -167,8 +167,8 @@ class FolderContentsView(BrowserView):
             'cmf_uid',
             'commentators',
             'created',
-            'effective',
-            'expires',
+            # 'effective',  XXX(gforcada) we need this column
+            # 'expires',  XXX(gforcada) we need this column
             'getIcon',
             'getId',
             'getRemoteUrl',
