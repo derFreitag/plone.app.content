@@ -1,6 +1,12 @@
 Changelog
 =========
 
+3.3.1 (unreleased)
+------------------
+
+- Remove ``expires`` and ``effective`` columns from being blacklisted.
+  [gforcada]
+
 3.3 (2016-09-14)
 ----------------
 
