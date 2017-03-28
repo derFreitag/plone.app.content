@@ -7,7 +7,8 @@ Changelog
 
 Breaking changes:
 
-- *add item here*
+- Remove ``expires`` and ``effective`` columns from being blacklisted.
+  [gforcada]
 
 New features:
 
