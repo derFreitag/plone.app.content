@@ -7,7 +7,8 @@ Changelog
 
 Breaking changes:
 
-- *add item here*
+- Remove ``expires`` and ``effective`` columns from being blacklisted.
+  [gforcada]
 
 New features:
 
@@ -39,7 +40,7 @@ Bug fixes:
 
 - removed unittest2 dependency.
   [kakshay21]
-  
+
 3.4 (2017-04-01)
 ----------------
 
