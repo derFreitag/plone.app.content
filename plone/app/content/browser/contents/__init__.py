@@ -214,9 +214,11 @@ class FolderContentsView(BrowserView):
             'Creator': translate(_('Creator'), context=self.request),
             'Description': translate(_('Description'), context=self.request),
             'EffectiveDate': translate(_('Publication date'), context=self.request),  # noqa
+            'effective': translate(_('Publication date'), context=self.request),  # noqa
             'end': translate(_('End Date'), context=self.request),
             'exclude_from_nav': translate(_('Excluded from navigation'), context=self.request),  # noqa
             'ExpirationDate': translate(_('Expiration date'), context=self.request),  # noqa
+            'expires': translate(_('Expiration date'), context=self.request),  # noqa
             'getObjSize': translate(_('Object Size'), context=self.request),  # noqa
             'id': translate(_('ID'), context=self.request),
             'is_folderish': translate(_('Folder'), context=self.request),
@@ -249,6 +251,13 @@ class FolderContentsView(BrowserView):
         site_path = site.getPhysicalPath()
         context_path = self.context.getPhysicalPath()
         columns = self.get_columns()
+        activeColumns = [#'EffectiveDate',
+                         #'ExpirationDate',
+                         'effective',
+                         'expires',
+                         'review_state',
+                         'Type',
+                         ]
         options = {
             'vocabularyUrl': '%splone.app.vocabularies.Catalog' % (
                 base_vocabulary),
@@ -261,6 +270,7 @@ class FolderContentsView(BrowserView):
             'contextInfoUrl': '%s{path}/@@fc-contextInfo' % base_url,
             'setDefaultPageUrl': '%s{path}/@@fc-setDefaultPage' % base_url,
             'availableColumns': columns,
+            'activeColumns': activeColumns,
             'attributes': ['Title', 'path', 'getURL', 'getIcon', 'portal_type'] + columns.keys(),  # noqa
             'buttons': self.get_actions(),
             'rearrange': {
