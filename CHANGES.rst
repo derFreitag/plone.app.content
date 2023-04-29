@@ -8,6 +8,16 @@ Changelog
 
 .. towncrier release notes start
 
+4.0.1.post0 (2023-04-29)
+------------------------
+
+Breaking changes:
+
+
+- Remove ``expires`` and ``effective`` columns from being blacklisted.
+  [gforcada] (#999)
+
+
 4.0.1 (2022-11-18)
 ------------------
 
