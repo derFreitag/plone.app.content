@@ -1,6 +1,6 @@
 from setuptools import setup
 
-version = "5.0.0.post0"
+version = "5.0.0.post1.dev0"
 
 setup(
     name="plone.app.content",
